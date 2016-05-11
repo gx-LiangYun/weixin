@@ -1,0 +1,11 @@
+E:\MyProject\LY.WeiXin\LY.WeiXin.Common.Test\bin\Debug\LY.WeiXin.Common.Test.dll
+E:\MyProject\LY.WeiXin\LY.WeiXin.Common.Test\bin\Debug\LY.WeiXin.Common.Test.pdb
+E:\MyProject\LY.WeiXin\LY.WeiXin.Common.Test\bin\Debug\LY.WeiXin.Common.dll
+E:\MyProject\LY.WeiXin\LY.WeiXin.Common.Test\bin\Debug\LY.WeiXin.WeiXinModels.dll
+E:\MyProject\LY.WeiXin\LY.WeiXin.Common.Test\bin\Debug\Newtonsoft.Json.dll
+E:\MyProject\LY.WeiXin\LY.WeiXin.Common.Test\bin\Debug\LY.WeiXin.Common.pdb
+E:\MyProject\LY.WeiXin\LY.WeiXin.Common.Test\bin\Debug\LY.WeiXin.WeiXinModels.pdb
+E:\MyProject\LY.WeiXin\LY.WeiXin.Common.Test\bin\Debug\Newtonsoft.Json.xml
+E:\MyProject\LY.WeiXin\LY.WeiXin.Common.Test\obj\Debug\LY.WeiXin.Common.Test.csprojResolveAssemblyReference.cache
+E:\MyProject\LY.WeiXin\LY.WeiXin.Common.Test\obj\Debug\LY.WeiXin.Common.Test.dll
+E:\MyProject\LY.WeiXin\LY.WeiXin.Common.Test\obj\Debug\LY.WeiXin.Common.Test.pdb

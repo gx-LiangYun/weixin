@@ -1,0 +1,13 @@
+E:\MyProject\LY.WeiXin\LY.WeiXin.EFDAL\obj\Debug\LY.WeiXin.EFDAL.csprojResolveAssemblyReference.cache
+E:\MyProject\LY.WeiXin\LY.WeiXin.EFDAL\obj\Debug\LY.WeiXin.EFDAL.Migrations.CreateSysConfigItemTable.resources
+E:\MyProject\LY.WeiXin\LY.WeiXin.EFDAL\obj\Debug\LY.WeiXin.EFDAL.csproj.GenerateResource.Cache
+E:\MyProject\LY.WeiXin\LY.WeiXin.EFDAL\bin\Debug\LY.WeiXin.EFDAL.dll
+E:\MyProject\LY.WeiXin\LY.WeiXin.EFDAL\bin\Debug\LY.WeiXin.EFDAL.pdb
+E:\MyProject\LY.WeiXin\LY.WeiXin.EFDAL\bin\Debug\EntityFramework.dll
+E:\MyProject\LY.WeiXin\LY.WeiXin.EFDAL\bin\Debug\EntityFramework.SqlServer.dll
+E:\MyProject\LY.WeiXin\LY.WeiXin.EFDAL\bin\Debug\LY.WeiXin.BusinessModels.dll
+E:\MyProject\LY.WeiXin\LY.WeiXin.EFDAL\bin\Debug\LY.WeiXin.BusinessModels.pdb
+E:\MyProject\LY.WeiXin\LY.WeiXin.EFDAL\bin\Debug\EntityFramework.xml
+E:\MyProject\LY.WeiXin\LY.WeiXin.EFDAL\bin\Debug\EntityFramework.SqlServer.xml
+E:\MyProject\LY.WeiXin\LY.WeiXin.EFDAL\obj\Debug\LY.WeiXin.EFDAL.dll
+E:\MyProject\LY.WeiXin\LY.WeiXin.EFDAL\obj\Debug\LY.WeiXin.EFDAL.pdb

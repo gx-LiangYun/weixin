@@ -1,0 +1,7 @@
+E:\MyProject\LY.WeiXin\LY.WeiXin.IDAL\bin\Debug\LY.WeiXin.IDAL.dll
+E:\MyProject\LY.WeiXin\LY.WeiXin.IDAL\bin\Debug\LY.WeiXin.IDAL.pdb
+E:\MyProject\LY.WeiXin\LY.WeiXin.IDAL\bin\Debug\LY.WeiXin.BusinessModels.dll
+E:\MyProject\LY.WeiXin\LY.WeiXin.IDAL\bin\Debug\LY.WeiXin.BusinessModels.pdb
+E:\MyProject\LY.WeiXin\LY.WeiXin.IDAL\obj\Debug\LY.WeiXin.IDAL.csprojResolveAssemblyReference.cache
+E:\MyProject\LY.WeiXin\LY.WeiXin.IDAL\obj\Debug\LY.WeiXin.IDAL.dll
+E:\MyProject\LY.WeiXin\LY.WeiXin.IDAL\obj\Debug\LY.WeiXin.IDAL.pdb

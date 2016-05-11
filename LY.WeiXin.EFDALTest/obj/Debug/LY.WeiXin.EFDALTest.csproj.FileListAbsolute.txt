@@ -1,0 +1,14 @@
+E:\MyProject\LY.WeiXin\LY.WeiXin.EFDALTest\obj\Debug\LY.WeiXin.EFDALTest.csprojResolveAssemblyReference.cache
+E:\MyProject\LY.WeiXin\LY.WeiXin.EFDALTest\bin\Debug\LY.WeiXin.EFDALTest.dll.config
+E:\MyProject\LY.WeiXin\LY.WeiXin.EFDALTest\bin\Debug\LY.WeiXin.EFDALTest.dll
+E:\MyProject\LY.WeiXin\LY.WeiXin.EFDALTest\bin\Debug\LY.WeiXin.EFDALTest.pdb
+E:\MyProject\LY.WeiXin\LY.WeiXin.EFDALTest\bin\Debug\EntityFramework.dll
+E:\MyProject\LY.WeiXin\LY.WeiXin.EFDALTest\bin\Debug\EntityFramework.SqlServer.dll
+E:\MyProject\LY.WeiXin\LY.WeiXin.EFDALTest\bin\Debug\LY.WeiXin.BusinessModels.dll
+E:\MyProject\LY.WeiXin\LY.WeiXin.EFDALTest\bin\Debug\LY.WeiXin.EFDAL.dll
+E:\MyProject\LY.WeiXin\LY.WeiXin.EFDALTest\bin\Debug\LY.WeiXin.BusinessModels.pdb
+E:\MyProject\LY.WeiXin\LY.WeiXin.EFDALTest\bin\Debug\LY.WeiXin.EFDAL.pdb
+E:\MyProject\LY.WeiXin\LY.WeiXin.EFDALTest\bin\Debug\EntityFramework.xml
+E:\MyProject\LY.WeiXin\LY.WeiXin.EFDALTest\bin\Debug\EntityFramework.SqlServer.xml
+E:\MyProject\LY.WeiXin\LY.WeiXin.EFDALTest\obj\Debug\LY.WeiXin.EFDALTest.dll
+E:\MyProject\LY.WeiXin\LY.WeiXin.EFDALTest\obj\Debug\LY.WeiXin.EFDALTest.pdb

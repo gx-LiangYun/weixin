@@ -1,0 +1,4 @@
+E:\MyProject\LY.WeiXin\LY.WeiXin.WeiXinModels\bin\Debug\LY.WeiXin.WeiXinModels.dll
+E:\MyProject\LY.WeiXin\LY.WeiXin.WeiXinModels\bin\Debug\LY.WeiXin.WeiXinModels.pdb
+E:\MyProject\LY.WeiXin\LY.WeiXin.WeiXinModels\obj\Debug\LY.WeiXin.WeiXinModels.dll
+E:\MyProject\LY.WeiXin\LY.WeiXin.WeiXinModels\obj\Debug\LY.WeiXin.WeiXinModels.pdb

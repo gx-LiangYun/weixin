@@ -48,7 +48,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Home2Controller.cs" />
     <Compile Include="Migrations\201605070927244_CreateSysConfigItemTable.cs" />
     <Compile Include="Migrations\201605070927244_CreateSysConfigItemTable.Designer.cs">
       <DependentUpon>201605070927244_CreateSysConfigItemTable.cs</DependentUpon>
