@@ -143,7 +143,7 @@ namespace LY.WeiXin.Common
         /// </summary>
         /// <param name="access_token">调用接口凭证</param>
         /// <returns></returns>
-        public static WeiXinModels.WxMenuWrap GetWxMenu(string access_token)
+        public static WeiXinModels.WxMenuWrapper GetWxMenu(string access_token)
         {
             return new WxMenuHelper().Get(access_token);
         }

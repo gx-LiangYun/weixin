@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace LY.WeiXin.WeiXinModels
 {
 
-    public class WxMenuWrap
+    public class WxMenuWrapper
     {
         public WxMenu menu;
     }

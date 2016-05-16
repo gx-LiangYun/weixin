@@ -10,7 +10,7 @@ namespace LY.WeiXin.Common
     class WxMenuHelper : WeiXinModels.IWxMenu
     {
 
-        public WeiXinModels.WxMenuWrap Get(string access_token)
+        public WeiXinModels.WxMenuWrapper Get(string access_token)
         {
             if (string.IsNullOrEmpty(access_token))
             {
@@ -18,7 +18,7 @@ namespace LY.WeiXin.Common
             }
             string url = "https://api.weixin.qq.com/cgi-bin/menu/get?access_token=" + access_token;
             string responseContent = HttpUtil.GetHttpGetResultContent(url);
-            WeiXinModels.WxMenuWrap wrap = Newtonsoft.Json.JsonConvert.DeserializeObject<WeiXinModels.WxMenuWrap>(responseContent);
+            WeiXinModels.WxMenuWrapper wrap = Newtonsoft.Json.JsonConvert.DeserializeObject<WeiXinModels.WxMenuWrapper>(responseContent);
             return wrap;
         }
 
