@@ -11,7 +11,7 @@ namespace LY.WeiXin.Common
     /// <summary>
     /// 微信辅助工具类 
     /// </summary>
-    public class WeiXinUtil
+    public class WeiXinUtility
     {
         private static readonly object syncLock = new object();
 
@@ -45,7 +45,7 @@ namespace LY.WeiXin.Common
 
         public static string GetAccessToken(string wx_appid, string wx_secret)
         {
-            WeiXinModels.AccessTokenModel accessToken = (WeiXinModels.AccessTokenModel)
+            WeiXinModels.WxAccessToken accessToken = (WeiXinModels.WxAccessToken)
                 System.Runtime.Caching.MemoryCache.Default.Get("AcceptToken");
             if (accessToken != null && accessToken.IsValid())
             {
@@ -55,7 +55,7 @@ namespace LY.WeiXin.Common
             string targetUrl = string.Format("https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid={0}&secret={1}", wx_appid, wx_secret);
             try
             {
-                string jsonString = HttpUtil.GetHttpPostResultContent(targetUrl);
+                string jsonString = HttpUtility.GetHttpPostResultContent(targetUrl);
                 var o = Newtonsoft.Json.Linq.JObject.Parse(jsonString);
                 var jtokenAccessToken = o["access_token"];
                 var jtokenExpires = o["expires_in"];
@@ -65,7 +65,7 @@ namespace LY.WeiXin.Common
                 }
                 string access_token = jtokenAccessToken != null ? jtokenAccessToken.ToString().Trim() : "";
                 int expiresIn = Convert.ToInt32(jtokenExpires.ToString());
-                accessToken = new WeiXinModels.AccessTokenModel();
+                accessToken = new WeiXinModels.WxAccessToken();
                 accessToken.AccessToken = access_token;
                 accessToken.ExpiresSecond = expiresIn;
                 accessToken.IssueTime = DateTime.Now;
@@ -85,7 +85,7 @@ namespace LY.WeiXin.Common
         /// </summary>
         /// <param name="accessToken">调用接口凭证</param>
         /// <returns></returns>
-        public static bool SaveAcceptTokenToCache(WeiXinModels.AccessTokenModel accessToken)
+        public static bool SaveAcceptTokenToCache(WeiXinModels.WxAccessToken accessToken)
         {
             lock (syncLock)
             {
@@ -113,7 +113,7 @@ namespace LY.WeiXin.Common
             string url = "https://api.weixin.qq.com/cgi-bin/getcallbackip?access_token=" + access_token;
             try
             {
-                string responseContent = HttpUtil.GetHttpGetResultContent(url);
+                string responseContent = HttpUtility.GetHttpGetResultContent(url);
                 if (string.IsNullOrEmpty(responseContent))
                 {
                     return null;

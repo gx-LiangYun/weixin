@@ -20,7 +20,7 @@ namespace LY.WeiXin.App.Controllers
                 //System.IO.File.WriteAllText(path, txt);
 
                 string wx_token = System.Configuration.ConfigurationManager.AppSettings["wx_token"];
-                if (WeiXinUtil.CheckSignature(signature, echostr, timestamp, nonce, wx_token))
+                if (WeiXinUtility.CheckSignature(signature, echostr, timestamp, nonce, wx_token))
                 {
                     return this.Content(echostr);
                 }
@@ -43,7 +43,7 @@ namespace LY.WeiXin.App.Controllers
         {
             string wx_appid = ConfigurationManager.AppSettings["wx_appid"];
             string wx_secret = ConfigurationManager.AppSettings["wx_appsecret"];
-            string access_token = WeiXinUtil.GetAccessToken(wx_appid, wx_secret);
+            string access_token = WeiXinUtility.GetAccessToken(wx_appid, wx_secret);
 
             return this.Content(access_token);
         }

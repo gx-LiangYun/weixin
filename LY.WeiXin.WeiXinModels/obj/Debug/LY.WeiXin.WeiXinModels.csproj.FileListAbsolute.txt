@@ -4,4 +4,3 @@ E:\MyProject\LY.WeiXin\LY.WeiXin.WeiXinModels\obj\Debug\LY.WeiXin.WeiXinModels.d
 E:\MyProject\LY.WeiXin\LY.WeiXin.WeiXinModels\obj\Debug\LY.WeiXin.WeiXinModels.pdb
 E:\MyProject\LY.WeiXin\LY.WeiXin.WeiXinModels\bin\Debug\Newtonsoft.Json.dll
 E:\MyProject\LY.WeiXin\LY.WeiXin.WeiXinModels\bin\Debug\Newtonsoft.Json.xml
-E:\MyProject\LY.WeiXin\LY.WeiXin.WeiXinModels\obj\Debug\LY.WeiXin.WeiXinModels.csprojResolveAssemblyReference.cache

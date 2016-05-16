@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace LY.WeiXin.Common
 {
-    public class HttpUtil
+    public class HttpUtility
     {
         public static string GetHttpGetResultContent(string url)
         {
@@ -44,17 +44,17 @@ namespace LY.WeiXin.Common
         {
             HttpWebRequest req = HttpWebRequest.CreateHttp(url);
             req.Method = "POST";
-            var reqStream = req.GetRequestStream();
+            System.IO.Stream reqStream = null;
             if (!string.IsNullOrEmpty(postData))
             {
-                using (var reqStreamWriter = new System.IO.StreamWriter(reqStream))
-                {
-                    reqStreamWriter.Write(postData);
-                }
+                byte[] postBytes = Encoding.UTF8.GetBytes(postData);
+                //req.ContentLength = postBytes.Length;
+                reqStream = req.GetRequestStream();
+                reqStream.Write(postBytes, 0, postBytes.Length);
             }
             var responseStream = req.GetResponse().GetResponseStream();
-            
-            reqStream.Dispose();
+            if (reqStream != null)
+                reqStream.Dispose();
 
             using (responseStream)
             {

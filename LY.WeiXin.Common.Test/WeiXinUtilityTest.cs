@@ -15,7 +15,7 @@ namespace LY.WeiXin.Common.Test
         [TestMethod]
         public void GetAccessToken()
         {
-            string access_token = WeiXinUtil.GetAccessToken("wx1f28144d7d9bc36e", "49bfdb43c6158c0a1d02926c43503da4");
+            string access_token = WeiXinUtility.GetAccessToken("wx1f28144d7d9bc36e", "49bfdb43c6158c0a1d02926c43503da4");
             Assert.IsTrue(!string.IsNullOrEmpty(access_token));
 
             //string access_token2 = WeiXinUtility.GetAccessToken("wx1f28144d7d9bc36e", "49bfdb43c6158c0a1d02926c43503da4");
@@ -25,24 +25,27 @@ namespace LY.WeiXin.Common.Test
         [TestMethod]
         public void GetWXServerIPListTest()
         {
-            string[] ips = WeiXinUtil.GetWXServerIPList(WeiXinUtil.GetAccessToken(appid, app_secret));
+            string[] ips = WeiXinUtility.GetWXServerIPList(WeiXinUtility.GetAccessToken(appid, app_secret));
             Assert.IsNotNull(ips);
         }
         [TestMethod]
         public void GetWxMenuTest()
         {
-            var wrap = WeiXinUtil.GetWxMenu(WeiXinUtil.GetAccessToken(appid, app_secret));
+            var wrap = WeiXinUtility.GetWxMenu(WeiXinUtility.GetAccessToken(appid, app_secret));
             Assert.IsNotNull(wrap);
         }
 
         [TestMethod]
         public void CreateWxMenu()
         {
-            string access_token = WeiXinUtil.GetAccessToken(appid, app_secret);
+            string access_token = WeiXinUtility.GetAccessToken(appid, app_secret);
             var menu = new WeiXinModels.WxMenu();
-            menu.button.Add(new WeiXinModels.WxMenuItem{ name = "百度", type="view", url = "http://www.baidu.com" });
-            bool result = WeiXinUtil.CreateWxMenu(access_token, menu);
+            menu.button.Add(new WeiXinModels.WxMenuItem { name = "百度", type = "view", url = "http://www.baidu.com" });
+            menu.button.Add(new WeiXinModels.WxMenuItem { name = "新浪", type = "view", url = "http://www.sina.com" });
+            bool result = WeiXinUtility.CreateWxMenu(access_token, menu);
             Assert.IsTrue(result);
         }
+
+        
     }
 }

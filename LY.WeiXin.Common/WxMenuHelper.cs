@@ -17,7 +17,7 @@ namespace LY.WeiXin.Common
                 throw new ArgumentNullException("access_token");
             }
             string url = "https://api.weixin.qq.com/cgi-bin/menu/get?access_token=" + access_token;
-            string responseContent = HttpUtil.GetHttpGetResultContent(url);
+            string responseContent = HttpUtility.GetHttpGetResultContent(url);
             WeiXinModels.WxMenuWrapper wrap = Newtonsoft.Json.JsonConvert.DeserializeObject<WeiXinModels.WxMenuWrapper>(responseContent);
             return wrap;
         }
@@ -33,7 +33,17 @@ namespace LY.WeiXin.Common
                 throw new ArgumentNullException("menu");
             }
             string url = "https://api.weixin.qq.com/cgi-bin/menu/create?access_token=" + access_token;
-            return false;
+            string postResult = HttpUtility.GetHttpPostResultContent(url, menu.ToString());
+            var jobj = Newtonsoft.Json.Linq.JObject.Parse(postResult);
+            var jtoken = jobj["errcode"];
+            int errcode = -1;
+            int.TryParse(jtoken.ToString(), out errcode);
+            if (jtoken == null || errcode != 0)
+            {
+                throw new Exception("创建自定义菜单失败！" + postResult);
+            }
+
+            return true;
         }
 
         public bool Delete(string access_token)
