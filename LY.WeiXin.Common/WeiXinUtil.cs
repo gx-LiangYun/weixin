@@ -33,7 +33,7 @@ namespace LY.WeiXin.Common
             }
             if (string.IsNullOrEmpty(wx_token))
             {
-                throw new Exception("Token 参数不正确！"); 
+                throw new Exception("Token 参数不正确！");
             }
             string[] paramsArr = new string[] { wx_token, timestamp, nonce };
             Array.Sort<string>(paramsArr);
@@ -43,34 +43,19 @@ namespace LY.WeiXin.Common
             return string.Equals(signature, sha1String, StringComparison.OrdinalIgnoreCase);
         }
 
-        private static string GetHttpResponseContent(string url, string httpMethod)
-        {
-            HttpWebRequest req = HttpWebRequest.CreateHttp(url);
-            req.Method = string.IsNullOrEmpty(httpMethod) ? "GET" : httpMethod.Trim();
-            var responseStream = req.GetResponse().GetResponseStream();
-            using (responseStream)
-            {
-                var streamReader = new System.IO.StreamReader(responseStream);
-                string content = streamReader.ReadToEnd();
-                streamReader.Dispose();
-
-                return content;
-            }
-        }
-
         public static string GetAccessToken(string wx_appid, string wx_secret)
         {
             WeiXinModels.AccessTokenModel accessToken = (WeiXinModels.AccessTokenModel)
                 System.Runtime.Caching.MemoryCache.Default.Get("AcceptToken");
             if (accessToken != null && accessToken.IsValid())
             {
-                return accessToken.AccessToken; 
+                return accessToken.AccessToken;
             }
             // 从微信服务器取 access_token 
             string targetUrl = string.Format("https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid={0}&secret={1}", wx_appid, wx_secret);
             try
             {
-                string jsonString = GetHttpResponseContent(targetUrl, "POST");
+                string jsonString = HttpUtil.GetHttpPostResultContent(targetUrl);
                 var o = Newtonsoft.Json.Linq.JObject.Parse(jsonString);
                 var jtokenAccessToken = o["access_token"];
                 var jtokenExpires = o["expires_in"];
@@ -98,7 +83,7 @@ namespace LY.WeiXin.Common
         /// <summary>
         /// 将 AccessToken 缓存 
         /// </summary>
-        /// <param name="accessToken">AcceptToken</param>
+        /// <param name="accessToken">调用接口凭证</param>
         /// <returns></returns>
         public static bool SaveAcceptTokenToCache(WeiXinModels.AccessTokenModel accessToken)
         {
@@ -115,7 +100,7 @@ namespace LY.WeiXin.Common
                 {
                     return false;
                 }
-                
+
             }
         }
 
@@ -128,10 +113,10 @@ namespace LY.WeiXin.Common
             string url = "https://api.weixin.qq.com/cgi-bin/getcallbackip?access_token=" + access_token;
             try
             {
-                string responseContent = GetHttpResponseContent(url, "GET");
-                if (string.IsNullOrEmpty(responseContent ))
+                string responseContent = HttpUtil.GetHttpGetResultContent(url);
+                if (string.IsNullOrEmpty(responseContent))
                 {
-                    return null; 
+                    return null;
                 }
                 var jobj = Newtonsoft.Json.Linq.JObject.Parse(responseContent);
                 var jArr = Newtonsoft.Json.Linq.JArray.Parse(jobj["ip_list"].ToString());
@@ -144,13 +129,42 @@ namespace LY.WeiXin.Common
                 {
                     ipList[i] = jArr[i].ToString();
                 }
-                
+
                 return ipList;
             }
             catch (Exception ex)
             {
                 throw ex;
             }
+        }
+
+        /// <summary>
+        /// 从微信服务器获取自定义菜单包装对象 
+        /// </summary>
+        /// <param name="access_token">调用接口凭证</param>
+        /// <returns></returns>
+        public static WeiXinModels.WxMenuWrap GetWxMenu(string access_token)
+        {
+            return new WxMenuHelper().Get(access_token);
+        }
+        /// <summary>
+        /// 创建自定义菜单
+        /// </summary>
+        /// <param name="access_token">调用接口凭证</param>
+        /// <param name="menu">微信自定义菜单对象</param>
+        /// <returns></returns>
+        public static bool CreateWxMenu(string access_token, WeiXinModels.WxMenu menu)
+        {
+            return new WxMenuHelper().Create(access_token, menu);
+        }
+        /// <summary>
+        /// 删除自定义菜单
+        /// </summary>
+        /// <param name="access_token">调用接口凭证</param>
+        /// <returns></returns>
+        public static bool DeleteWxMenu(string access_token)
+        {
+            return new WxMenuHelper().Delete(access_token);
         }
     }
 }

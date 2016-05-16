@@ -58,6 +58,10 @@
       <Project>{a912589f-8c09-4799-9b7d-83939358611c}</Project>
       <Name>LY.WeiXin.Common</Name>
     </ProjectReference>
+    <ProjectReference Include="..\LY.WeiXin.WeiXinModels\LY.WeiXin.WeiXinModels.csproj">
+      <Project>{c4278430-f701-4ae7-8e16-43d49454bd19}</Project>
+      <Name>LY.WeiXin.WeiXinModels</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Net;
 
@@ -25,6 +27,22 @@ namespace LY.WeiXin.Common.Test
         {
             string[] ips = WeiXinUtil.GetWXServerIPList(WeiXinUtil.GetAccessToken(appid, app_secret));
             Assert.IsNotNull(ips);
+        }
+        [TestMethod]
+        public void GetWxMenuTest()
+        {
+            var wrap = WeiXinUtil.GetWxMenu(WeiXinUtil.GetAccessToken(appid, app_secret));
+            Assert.IsNotNull(wrap);
+        }
+
+        [TestMethod]
+        public void CreateWxMenu()
+        {
+            string access_token = WeiXinUtil.GetAccessToken(appid, app_secret);
+            var menu = new WeiXinModels.WxMenu();
+            menu.button.Add(new WeiXinModels.WxMenuItem{ name = "百度", type="view", url = "http://www.baidu.com" });
+            bool result = WeiXinUtil.CreateWxMenu(access_token, menu);
+            Assert.IsTrue(result);
         }
     }
 }

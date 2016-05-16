@@ -44,8 +44,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HttpUtil.cs" />
     <Compile Include="WeiXinUtil.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WxMenuHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LY.WeiXin.WeiXinModels\LY.WeiXin.WeiXinModels.csproj">

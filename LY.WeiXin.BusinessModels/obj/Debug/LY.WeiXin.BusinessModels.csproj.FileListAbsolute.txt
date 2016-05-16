@@ -2,3 +2,4 @@ E:\MyProject\LY.WeiXin\LY.WeiXin.BusinessModels\bin\Debug\LY.WeiXin.BusinessMode
 E:\MyProject\LY.WeiXin\LY.WeiXin.BusinessModels\bin\Debug\LY.WeiXin.BusinessModels.pdb
 E:\MyProject\LY.WeiXin\LY.WeiXin.BusinessModels\obj\Debug\LY.WeiXin.BusinessModels.dll
 E:\MyProject\LY.WeiXin\LY.WeiXin.BusinessModels\obj\Debug\LY.WeiXin.BusinessModels.pdb
+E:\MyProject\LY.WeiXin\LY.WeiXin.BusinessModels\obj\Debug\LY.WeiXin.BusinessModels.csprojResolveAssemblyReference.cache
