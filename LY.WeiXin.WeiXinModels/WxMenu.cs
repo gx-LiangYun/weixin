@@ -12,7 +12,7 @@ namespace LY.WeiXin.WeiXinModels
     /// </summary>
     public class WxMenu
     {
-        public readonly List<WxMenuItem> button = new List<WxMenuItem>();
+        public List<WxMenuItem> button = new List<WxMenuItem>();
 
         public override string ToString()
         {

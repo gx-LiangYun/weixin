@@ -39,13 +39,5 @@ namespace LY.WeiXin.App.Controllers
             return this.View();
         }
 
-        public ActionResult ShowAccessToken()
-        {
-            string wx_appid = ConfigurationManager.AppSettings["wx_appid"];
-            string wx_secret = ConfigurationManager.AppSettings["wx_appsecret"];
-            string access_token = WeiXinUtility.GetAccessToken(wx_appid, wx_secret);
-
-            return this.Content(access_token);
-        }
     }
 }
